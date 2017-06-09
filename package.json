@@ -69,7 +69,7 @@
 	"engines": {
 		"node": ">=0.10.10"
 	},
-	"main": "index.js",
+	"main": "dist/angularjs-dropdown-multiselect.min.js",
 	"keywords": [
 		"angular",
 		"multiselect"
