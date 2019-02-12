@@ -305,6 +305,9 @@ export default function dropdownMultiselectController(
 
 		const searchResult = $filter('filter')($scope.options, $scope.getFilter($scope.input.searchFilter));
 		angular.forEach(searchResult, (value) => {
+			if (value.disabled) {
+				return;
+			}
 			$scope.setSelectedItem(value, true, false);
 		});
 		$scope.externalEvents.onSelectionChanged();

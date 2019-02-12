@@ -414,6 +414,9 @@
 
 			var searchResult = $filter('filter')($scope.options, $scope.getFilter($scope.input.searchFilter));
 			angular.forEach(searchResult, function (value) {
+				if (value.disabled) {
+					return;
+				}
 				$scope.setSelectedItem(value, true, false);
 			});
 			$scope.externalEvents.onSelectionChanged();
