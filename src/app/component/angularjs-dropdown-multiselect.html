@@ -1,7 +1,8 @@
 <div class="multiselect-parent btn-group dropdown-multiselect"
      ng-class="{open: open}">
-     <div ng-transclude="toggleDropdown" ng-click="toggleDropdown()">
+     <div ng-transclude="toggleDropdown">
       <button ng-disabled="disabled"
+              ng-click="toggleDropdown()"
               type="button"
               class="dropdown-toggle"
               ng-class="settings.buttonClasses"
@@ -17,7 +18,6 @@
          data-ng-click="selectAll()"
          tabindex="-1"
          id="selectAll">
-        <span class="glyphicon glyphicon-ok"></span>
         {{texts.checkAll}}
       </a>
     <li ng-if="settings.showUncheckAll">
@@ -25,7 +25,6 @@
          data-ng-click="deselectAll();"
          tabindex="-1"
          id="deselectAll">
-        <span class="glyphicon glyphicon-remove"></span>
         {{texts.uncheckAll}}
       </a>
     </li>
